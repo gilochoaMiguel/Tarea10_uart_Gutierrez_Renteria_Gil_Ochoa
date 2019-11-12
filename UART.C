@@ -265,32 +265,50 @@ void UART_put_char (uart_channel_t uart_channel, uint8_t character)
 	}
 }
 
-void UART_put_string(uart_channel_t uart_channel, int8_t* string)
+void UART_put_string(uart_channel_t uart_channel, uint8_t characters [])
 {
 	switch (uart_channel)
 			{
 				case UART_0:
-
+					while (*characters)
+					{
+						UART_put_char(UART_0, *characters++);
+					}
 				break;
 
 				case UART_1:
-
+					while (*characters)
+					{
+						UART_put_char(UART_1, *characters++);
+					}
 				break;
 
 				case UART_2:
-
+					while (*characters)
+					{
+						UART_put_char(UART_2, *characters++);
+					}
 				break;
 
 				case UART_3:
-
+					while (*characters)
+					{
+						UART_put_char(UART_3, *characters++);
+					}
 				break;
 
 				case UART_4:
-
+					while (*characters)
+					{
+						UART_put_char(UART_4, *characters++);
+					}
 				break;
 
 				case UART_5:
-
+					while (*characters)
+					{
+						UART_put_char(UART_5, *characters++);
+					}
 				break;
 		}
 }
